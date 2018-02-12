@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.admin.evotest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="app_uuid"
+            android:value="7f858c84-23bf-483e-965f-cb39cf0889ee" />
+
+        <activity android:name=".MainActivity">
+            <meta-data
+                android:name="ru.evotor.launcher.BACKGROUND_COLOR"
+                android:value="#133788" />
+            <meta-data
+                android:name="ru.evotor.launcher.GRANTS"
+                android:resource="@array/MyDiscountService_grants" />
+
+            <intent-filter>
+                <action android:name="ru.evotor.intent.action.SELL_MAIN" />
+
+                <category android:name="android.intent.category.EVOTOR" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".MyDiscountService"
+            android:enabled="true"
+            android:exported="true">
+            <meta-data
+                android:name="ru.evotor.sales_screen.BACKGROUND_COLOR"
+                android:value="#133788" />
+
+            <intent-filter android:priority="20">
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="evo.v2.receipt.sell.receiptDiscount" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".MyIntentService"
+            android:exported="false"></service>
+    </application>
+
+</manifest>

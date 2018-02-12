@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="MyDiscountService_grants">
+        <item>CASH_OPERATIONS_SELL</item>
+        <item>CASH_OPERATIONS_PAYBACK </item>
+        <item>CASH_OPERATIONS_SELL_ADDITIONAL_CHANGE_ZERO_PRICE</item>
+        <item>CASH_OPERATIONS_SELL_ADDITIONAL_POSITION_DISCOUNT</item>
+        <item>CASH_OPERATIONS_SELL_ADDITIONAL_DOCUMENT_DISCOUNT</item>
+    </string-array>
+</resources>
